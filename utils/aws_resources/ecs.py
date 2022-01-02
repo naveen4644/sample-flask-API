@@ -19,7 +19,7 @@ def create_cluster():
 def delete_cluster():
     try:
         response = client.delete_cluster(
-            clusterName=ECS_CLUSTER_NAME
+            cluster=ECS_CLUSTER_NAME
         )
         if response['ResponseMetadata']['HTTPStatusCode'] == 200:
             return True
