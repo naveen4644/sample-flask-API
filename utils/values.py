@@ -34,3 +34,7 @@ ECS_TASK_POLICY_JSON={
     ]
 }
 ECS_TASK_POLICY_ARN=f'arn:aws:iam::{ACCOUNT_ID}:policy/{ECS_TASK_POLICY_NAME}'
+ECS_TASK_ROLE_ARN=f'arn:aws:iam::{ACCOUNT_ID}:role/{ECS_TASK_ROLE_NAME}'
+ECS_CONTAINER_NAME='flask-api-container'
+ECS_TASK_DEFINITION_NAME='flask-api-td'
+DOCKER_IMAGE_URI=f'{ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/{ECR_REPO_NAME}'
