@@ -8,7 +8,7 @@ def create_repo():
         response = client.create_repository(
             repositoryName=ECR_REPO_NAME,
             imageScanningConfiguration={
-                'scanOnPush': True
+                'scanOnPush': False
             }
         )
         if response['ResponseMetadata']['HTTPStatusCode'] == 200:

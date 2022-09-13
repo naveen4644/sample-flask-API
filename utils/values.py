@@ -1,9 +1,9 @@
-ACCOUNT_ID='892933193600'
-ECR_REPO_NAME='flask_app'
-ECS_CLUSTER_NAME='bstech'
-ECS_TASK_ROLE_NAME='ECSTaskRole'
+ACCOUNT_ID='763021346403'
+ECR_REPO_NAME='dev-orthos'
+ECS_CLUSTER_NAME='orthos-cluster'
+ECS_TASK_ROLE_NAME='orthos_project_ecs_performer'
 ECS_TASK_ROLE_DESC='ECS Task Role'
-ECS_TASK_POLICY_NAME='ECSTaskExceutionPolicy'
+ECS_TASK_POLICY_NAME='orthos_project_ecs_performer'
 ECS_TASK_POLICY_DESC='ECS Task Execution Policy'
 ECS_TASK_ROLE_JSON={
     "Version": "2012-10-17",
@@ -35,6 +35,7 @@ ECS_TASK_POLICY_JSON={
 }
 ECS_TASK_POLICY_ARN=f'arn:aws:iam::{ACCOUNT_ID}:policy/{ECS_TASK_POLICY_NAME}'
 ECS_TASK_ROLE_ARN=f'arn:aws:iam::{ACCOUNT_ID}:role/{ECS_TASK_ROLE_NAME}'
-ECS_CONTAINER_NAME='flask-api-container'
-ECS_TASK_DEFINITION_NAME='flask-api-td'
+ECS_CONTAINER_NAME='test-orthos'
+ECS_TASK_DEFINITION_NAME='test-orthos'
+ECS_TASK_DEFINITION_ARN=f'arn:aws:ecs:us-east-1:{ACCOUNT_ID}:task-definition/{ECS_TASK_DEFINITION_NAME}'
 DOCKER_IMAGE_URI=f'{ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/{ECR_REPO_NAME}'
