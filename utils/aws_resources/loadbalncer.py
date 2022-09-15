@@ -70,12 +70,6 @@ response1 = client.describe_target_groups(
 )
 # print(response['TargetGroups'][0]['TargetGroupArn'])
 
-response1 = client.describe_target_groups(
-     Names=[
-        'test-orthos-target-group',
-    
-     ]
-)
 
 response2 = client.describe_load_balancers(
      Names=[

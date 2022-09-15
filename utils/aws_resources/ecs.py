@@ -90,6 +90,7 @@ def create_service():
             'containerPort': 5005
         },
     ],
+    role='arn:aws:iam::763021346403:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS',
     # serviceRegistries=[
     #     {
     #         'registryArn': 'string',
@@ -109,7 +110,6 @@ def create_service():
     #     },
     # ],
     platformVersion='LATEST',
-    role='string',
     deploymentConfiguration={
         'deploymentCircuitBreaker': {
             'enable': True,
