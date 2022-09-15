@@ -8,7 +8,7 @@ response = client.create_target_group(
     Port=5005,
     VpcId='vpc-062af964db13d2f63',
     HealthCheckProtocol='HTTP',
-    # HealthCheckPort='Traffic port',
+   
     HealthCheckEnabled=True,
     HealthCheckPath='/',
     HealthCheckIntervalSeconds=30,
@@ -17,7 +17,7 @@ response = client.create_target_group(
     UnhealthyThresholdCount=2,
     Matcher={
         'HttpCode': '302',
-        # 'GrpcCode': 'string'
+       
     },
     TargetType='ip',
     Tags=[
@@ -39,14 +39,7 @@ response = client.create_load_balancer(
         'subnet-0826eed225ee08584',
         'subnet-0c2a4c881b34306f9'
     ],
-    # SubnetMappings=[
-    #     {
-    #         'SubnetId': 'string',
-    #         # 'AllocationId': 'string',
-    #         # 'PrivateIPv4Address': 'string',
-    #         # 'IPv6Address': 'string'
-    #     },
-    # ],
+    
     SecurityGroups=[
         'sg-095f4e84a06cb3243'
     ],
@@ -59,7 +52,7 @@ response = client.create_load_balancer(
     ],
     Type='application',
     IpAddressType='ipv4',
-    # CustomerOwnedIpv4Pool='string'
+    
 )
 
 response1 = client.describe_target_groups(
@@ -68,7 +61,6 @@ response1 = client.describe_target_groups(
     
      ]
 )
-# print(response['TargetGroups'][0]['TargetGroupArn'])
 
 
 response2 = client.describe_load_balancers(

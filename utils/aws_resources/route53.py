@@ -15,7 +15,7 @@ response = client.change_resource_record_sets(
                     'TTL': 300,
                     'ResourceRecords': [
                         {
-                            'Value': 'test-othos-lb-905887803.us-east-1.elb.amazonaws.com'
+                            'Value': 'test-othos-lb-363225668.us-east-1.elb.amazonaws.com'
                         },
                     ],
                     
